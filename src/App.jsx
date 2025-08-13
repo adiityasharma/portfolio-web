@@ -11,6 +11,7 @@ import { SiTailwindcss, SiMongodb } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
 import portfolioImage from "../src/assets/image/portfolio.png"
 import ecommerceImage from "../src/assets/image/ecommerce.png"
+import giphyImage from "../src/assets/image/giphy.png"
 
 
 export default function App() {
@@ -134,15 +135,15 @@ export default function App() {
               </div>
             ) : /* Projects Section */
             sec.id === "projects" ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mt-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
                 {[
                   {
                     title: "Portfolio Website",
                     desc: "A personal portfolio to showcase my work and skills.",
                     tech: ["React", "TailwindCSS", "Framer-motion"],
                     img: portfolioImage,
-                    live: "#",
-                    code: "#",
+                    live: "https://adityasharma-puce.vercel.app",
+                    code: "https://github.com/adiityasharma/portfolio-web",
                   },
                   {
                     title: "E-commerce App",
@@ -152,14 +153,14 @@ export default function App() {
                     live: "https://ecommerce-three-black-47.vercel.app/",
                     code: "https://github.com/adiityasharma/e-commerce-web",
                   },
-                  // {
-                  //   title: "Chat Application",
-                  //   desc: "Real-time chat app using WebSocket technology.",
-                  //   tech: ["React", "Socket.IO", "Node.js"],
-                  //   img: "https://via.placeholder.com/400x250",
-                  //   live: "#",
-                  //   code: "#",
-                  // },
+                  {
+                    title: "Giphy",
+                    desc: "A fast, fun, and seamless interface for exploring and sharing GIFs from Giphy.",
+                    tech: ["React", "TailwindCSS"],
+                    img: giphyImage,
+                    live: "https://giphy-clone-bice-xi.vercel.app/",
+                    code: "https://github.com/adiityasharma/GIPHY-Clone",
+                  },
                 ].map((proj, idx) => (
                   <motion.div
                     key={idx}
