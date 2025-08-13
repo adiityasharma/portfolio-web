@@ -6,13 +6,17 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaDatabase,
+  FaGithub,
+  FaLinkedin,
 } from "react-icons/fa";
+import { MdAlternateEmail } from "react-icons/md";
+import { FaXTwitter } from "react-icons/fa6";
 import { SiTailwindcss, SiMongodb } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
-import portfolioImage from "../src/assets/image/portfolio.png"
-import ecommerceImage from "../src/assets/image/ecommerce.png"
-import giphyImage from "../src/assets/image/giphy.png"
-
+import portfolioImage from "../src/assets/image/portfolio.png";
+import ecommerceImage from "../src/assets/image/ecommerce.png";
+import giphyImage from "../src/assets/image/giphy.png";
+import resume from "../public/Aditya Sharma CV.pdf"
 
 export default function App() {
   const sections = [
@@ -56,6 +60,27 @@ export default function App() {
     },
   ];
 
+  const followLinks = [
+    {
+      id: "github",
+      title: "Github",
+      icon: <FaGithub />,
+      url: "https://github.com/adiityasharma",
+    },
+    {
+      id: "twitter",
+      title: "Twitter/X",
+      icon: <FaXTwitter />,
+      url: "https://x.com/adityasharma_16",
+    },
+    {
+      id: "linkedin",
+      title: "LinkedIn",
+      icon: <FaLinkedin />,
+      url: "https://www.linkedin.com/in/adiityasharma/",
+    },
+  ];
+
   // Mouse parallax effect
   const [offset, setOffset] = useState({ x: 0, y: 0 });
   useEffect(() => {
@@ -87,7 +112,7 @@ export default function App() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="backdrop-blur-xl bg-white/30 rounded-2xl shadow-lg p-10 max-w-5xl text-center border border-white/40 transition transform hover:scale-[1.03] hover:shadow-2xl hover:border-purple-400/50"
+          className="backdrop-blur-xl bg-white/30 rounded-2xl shadow-lg p-10 max-w-5xl text-center border border-white/40 transition transform hover:scale-[1.03] hover:shadow-2xl hover:border-purple-400/50 flex flex-col items-center"
         >
           <h1 className="text-5xl md:text-8xl font-bold text-gray-800 transition-colors duration-300 hover:text-purple-600">
             Hi👋, I’m <span className="text-purple-600 ">Aditya Sharma</span>
@@ -95,6 +120,28 @@ export default function App() {
           <p className="text-xl md:text-3xl  mt-4 text-gray-700">
             Full-stack Developer — building beautiful & functional experiences.
           </p>
+
+          <div className="w-fit flex md:flex-row flex-col gap-2 items-center justify-center mt-6 ">
+            <div className="flex items-center justify-center md:gap-4 gap-2">
+              {followLinks?.map((item, index) => (
+                <a
+                  key={item?.id}
+                  href={item?.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-end md:gap-2 gap-1 md:px-3 px-2 py-1 bg-purple-500 text-white rounded hover:bg-purple-600 transition text-lg"
+                >
+                  <span className="md:text-lg text-sm">{item?.icon}</span>
+                  <span className="md:text-xl text-sm">{item?.title}</span>
+                </a>
+              ))}
+            </div>
+            <div className="flex items-end md:gap-2 gap-1 md:px-3 px-2 md:py-1 bg-purple-500 text-white rounded hover:bg-purple-600 transition text-lg">
+              <a href={resume} download="Aditya_Sharma_CV.pdf">
+                <span className="md:text-xl text-sm">Download CV</span>
+              </a>
+            </div>
+          </div>
         </motion.div>
 
         {/* Sections */}
