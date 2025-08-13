@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("./assets/fonts/SparkPlugSerifDemoRegular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  font-family: "MyCustomFont", sans-serif;
+}
