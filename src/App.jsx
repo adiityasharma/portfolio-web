@@ -16,7 +16,7 @@ import { IoLogoJavascript } from "react-icons/io5";
 import portfolioImage from "../src/assets/image/portfolio.png";
 import ecommerceImage from "../src/assets/image/ecommerce.png";
 import giphyImage from "../src/assets/image/giphy.png";
-import resume from "../public/Aditya Sharma CV.pdf"
+import resume from "/Aditya Sharma CV.pdf";
 
 export default function App() {
   const sections = [
@@ -36,8 +36,46 @@ export default function App() {
         },
         { icon: <FaNodeJs className="text-green-500" />, label: "Node.js" },
         { icon: <SiMongodb className="text-green-400" />, label: "MongoDB" },
-        { icon: <FaHtml5 className="text-orange-500" />, label: "HTML" },
-        { icon: <FaCss3Alt className="text-blue-500" />, label: "CSS" },
+        {
+          icon: (
+            <img
+              src="../src/assets/image/nextjs-icon.svg"
+              className="w-10"
+              alt=""
+            />
+          ),
+          label: "next.js",
+        },
+        {
+          icon: (
+            <img
+              src="../src/assets/image/typescript.svg"
+              className="w-10"
+              alt=""
+            />
+          ),
+          label: "TypeScript",
+        },
+        {
+          icon: (
+            <img
+              src="../src/assets/image/redux.svg"
+              className="w-10"
+              alt=""
+            />
+          ),
+          label: "Rtk",
+        },
+        {
+          icon: (
+            <img
+              src="../src/assets/image/zustand.png"
+              className="w-17"
+              alt=""
+            />
+          ),
+          label: "zustand",
+        },
         {
           icon: <IoLogoJavascript className="text-yellow-500" />,
           label: "JAVASCIPT",
@@ -165,7 +203,7 @@ export default function App() {
 
             {/* Skills Section */}
             {sec.id === "skills" ? (
-              <div className="grid grid-cols-3 sm:grid-cols-4 gap-6 mt-4">
+              <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-6 mt-4">
                 {sec.icons.map((skill, idx) => (
                   <motion.div
                     key={idx}
