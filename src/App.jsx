@@ -17,6 +17,10 @@ import portfolioImage from "../src/assets/image/portfolio.png";
 import ecommerceImage from "../src/assets/image/ecommerce.png";
 import giphyImage from "../src/assets/image/giphy.png";
 import resume from "/Aditya Sharma CV.pdf";
+import nextjsImg from "./assets/image/nextjs.png";
+import reduxImg from "./assets/image/redux.png";
+import typescriptImg from "./assets/image/typescript.png";
+import zustandImg from "./assets/image/zustand.png";
 
 export default function App() {
   const sections = [
@@ -37,43 +41,19 @@ export default function App() {
         { icon: <FaNodeJs className="text-green-500" />, label: "Node.js" },
         { icon: <SiMongodb className="text-green-400" />, label: "MongoDB" },
         {
-          icon: (
-            <img
-              src="../src/assets/image/nextjs-icon.svg"
-              className="w-10"
-              alt=""
-            />
-          ),
+          icon: <img src={nextjsImg} className="w-10" alt="" />,
           label: "next.js",
         },
         {
-          icon: (
-            <img
-              src="../src/assets/image/typescript.svg"
-              className="w-10"
-              alt=""
-            />
-          ),
+          icon: <img src={typescriptImg} className="w-10" alt="" />,
           label: "TypeScript",
         },
         {
-          icon: (
-            <img
-              src="../src/assets/image/redux.svg"
-              className="w-10"
-              alt=""
-            />
-          ),
+          icon: <img src={reduxImg} className="w-10" alt="" />,
           label: "Rtk",
         },
         {
-          icon: (
-            <img
-              src="../src/assets/image/zustand.png"
-              className="w-17"
-              alt=""
-            />
-          ),
+          icon: <img src={zustandImg} className="w-17" alt="" />,
           label: "zustand",
         },
         {
